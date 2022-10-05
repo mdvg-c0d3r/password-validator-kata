@@ -78,4 +78,22 @@ public class PasswordVerifierTest {
 
     assertFalse(result);
   }
+
+  @Test
+  public void shouldReturnTrueWhenPasswordContainsUnderscore() {
+    String password = "P_4SSWORd";
+
+    boolean result = passwordVerifier.verifyContainsUnderscore(password);
+
+    assertTrue(result);
+  }
+
+  @Test
+  public void shouldReturnFalseWhenPasswordDoesnotContainsUnderscore() {
+    String password = "PASSWORD";
+
+    boolean result = passwordVerifier.verifyContainsUnderscore(password);
+
+    assertFalse(result);
+  }
 }

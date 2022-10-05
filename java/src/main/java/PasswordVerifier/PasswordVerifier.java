@@ -26,4 +26,10 @@ public class PasswordVerifier {
     boolean result = lowerCasePattern.matcher(password).find();
     return result;
   }
+
+  public boolean verifyContainsUnderscore(String password) {
+    Pattern lowerCasePattern = Pattern.compile("_");
+    boolean result = lowerCasePattern.matcher(password).find();
+    return result;
+  }
 }
