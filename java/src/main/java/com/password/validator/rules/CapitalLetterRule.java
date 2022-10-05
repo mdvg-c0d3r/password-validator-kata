@@ -1,4 +1,4 @@
-package PasswordVerifier.rules;
+package com.password.validator.rules;
 
 import java.util.regex.Pattern;
 

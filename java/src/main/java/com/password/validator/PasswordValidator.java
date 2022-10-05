@@ -1,6 +1,6 @@
-package PasswordVerifier;
+package com.password.validator;
 
-import PasswordVerifier.rules.PasswordRule;
+import com.password.validator.rules.PasswordRule;
 
 import java.util.Collection;
 

@@ -1,5 +1,6 @@
-package PasswordVerifier.rules;
+package com.password.validator.rules;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -22,7 +23,7 @@ public class LowerLetterRuleTest {
 
     var result = lowerLetterRule.validate(password);
 
-    assertTrue(result);
+    Assertions.assertTrue(result);
   }
 
   @Test
@@ -31,6 +32,6 @@ public class LowerLetterRuleTest {
 
     var result = lowerLetterRule.validate(password);
 
-    assertFalse(result);
+    Assertions.assertFalse(result);
   }
 }

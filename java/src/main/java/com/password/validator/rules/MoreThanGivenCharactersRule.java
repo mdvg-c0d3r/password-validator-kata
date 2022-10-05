@@ -1,4 +1,4 @@
-package PasswordVerifier.rules;
+package com.password.validator.rules;
 
 public class MoreThanGivenCharactersRule implements PasswordRule {
 

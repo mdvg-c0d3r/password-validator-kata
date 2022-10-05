@@ -1,5 +1,6 @@
-package PasswordVerifier.rules;
+package com.password.validator.rules;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -16,7 +17,7 @@ class MoreThanGivenCharactersRuleTest {
 
     var result = moreThanGivenCharactersRule.validate(password);
 
-    assertTrue(result);
+    Assertions.assertTrue(result);
   }
 
   @Test
@@ -26,7 +27,7 @@ class MoreThanGivenCharactersRuleTest {
 
     var result = moreThanGivenCharactersRule.validate(password);
 
-    assertFalse(result);
+    Assertions.assertFalse(result);
   }
 
   @Test
@@ -36,7 +37,7 @@ class MoreThanGivenCharactersRuleTest {
 
     var result = moreThanGivenCharactersRule.validate(password);
 
-    assertTrue(result);
+    Assertions.assertTrue(result);
   }
 
   @Test
@@ -46,7 +47,7 @@ class MoreThanGivenCharactersRuleTest {
 
     var result = moreThanGivenCharactersRule.validate(password);
 
-    assertFalse(result);
+    Assertions.assertFalse(result);
   }
 
   @Test
@@ -56,7 +57,7 @@ class MoreThanGivenCharactersRuleTest {
 
     var result = moreThanGivenCharactersRule.validate(password);
 
-    assertTrue(result);
+    Assertions.assertTrue(result);
   }
 
   @Test
@@ -66,6 +67,6 @@ class MoreThanGivenCharactersRuleTest {
 
     var result = moreThanGivenCharactersRule.validate(password);
 
-    assertFalse(result);
+    Assertions.assertFalse(result);
   }
 }

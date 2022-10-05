@@ -1,4 +1,4 @@
-package PasswordVerifier.rules;
+package com.password.validator.rules;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
