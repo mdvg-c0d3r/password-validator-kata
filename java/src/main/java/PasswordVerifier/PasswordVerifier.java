@@ -14,4 +14,16 @@ public class PasswordVerifier {
     boolean result = uppercasePattern.matcher(password).find();
     return result;
   }
+
+  public boolean verifyLowerCaseLetter(String password) {
+    Pattern lowerCasePattern = Pattern.compile("[a-z]");
+    boolean result = lowerCasePattern.matcher(password).find();
+    return result;
+  }
+
+  public boolean verifyContainsANumber(String password) {
+    Pattern lowerCasePattern = Pattern.compile("\\d");
+    boolean result = lowerCasePattern.matcher(password).find();
+    return result;
+  }
 }

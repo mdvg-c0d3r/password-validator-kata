@@ -26,7 +26,7 @@ public class PasswordVerifierTest {
   }
 
   @Test
-  public void shouldReturnTrueWhenPasswordHasCapitalLetter() {
+  public void shouldReturnTrueWhenPasswordHasAtLeastACapitalLetter() {
     String password = "paSsword";
 
     boolean result = passwordVerifier.verifyCapitalLetter(password);
@@ -39,6 +39,42 @@ public class PasswordVerifierTest {
     String password = "password";
 
     boolean result = passwordVerifier.verifyCapitalLetter(password);
+
+    assertFalse(result);
+  }
+
+  @Test
+  public void shouldReturnTrueWhenPasswordHasAtLeastALowerCase() {
+    String password = "PASSWORd";
+
+    boolean result = passwordVerifier.verifyLowerCaseLetter(password);
+
+    assertTrue(result);
+  }
+
+  @Test
+  public void shouldReturnFalseWhenPasswordHasNoLowerCase() {
+    String password = "PASSWORD";
+
+    boolean result = passwordVerifier.verifyLowerCaseLetter(password);
+
+    assertFalse(result);
+  }
+
+  @Test
+  public void shouldReturnTrueWhenPasswordHasAtLeastANumber() {
+    String password = "P4SSWORd";
+
+    boolean result = passwordVerifier.verifyContainsANumber(password);
+
+    assertTrue(result);
+  }
+
+  @Test
+  public void shouldReturnFalseWhenPasswordHasNoNumber() {
+    String password = "PASSWORD";
+
+    boolean result = passwordVerifier.verifyContainsANumber(password);
 
     assertFalse(result);
   }
