@@ -32,4 +32,12 @@ public class PasswordVerifier {
     boolean result = lowerCasePattern.matcher(password).find();
     return result;
   }
+
+  public boolean validate(String password) {
+    return verifyMoreThanEightCharacters(password) &&
+      verifyCapitalLetter(password) &&
+      verifyLowerCaseLetter(password) &&
+      verifyContainsANumber(password) &&
+      verifyContainsUnderscore(password);
+  }
 }

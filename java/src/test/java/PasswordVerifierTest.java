@@ -96,4 +96,22 @@ public class PasswordVerifierTest {
 
     assertFalse(result);
   }
+
+  @Test
+  public void shouldReturnTrueWhenIsAValidPassword() {
+    String password = "P_4SSWORd";
+
+    boolean result = passwordVerifier.validate(password);
+
+    assertTrue(result);
+  }
+
+  @Test
+  public void shouldReturnFalseWhenIsAnInvalidPassword() {
+    String password = "PASSWORD";
+
+    boolean result = passwordVerifier.validate(password);
+
+    assertFalse(result);
+  }
 }
