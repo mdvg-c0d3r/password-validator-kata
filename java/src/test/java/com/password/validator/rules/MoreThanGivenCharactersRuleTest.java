@@ -3,9 +3,6 @@ package com.password.validator.rules;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 class MoreThanGivenCharactersRuleTest {
 
   private MoreThanGivenCharactersRule moreThanGivenCharactersRule;

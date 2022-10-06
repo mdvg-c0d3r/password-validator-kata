@@ -1,6 +1,5 @@
 package com.password.validator;
 
-import com.password.validator.PasswordValidator;
 import com.password.validator.rules.*;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
